@@ -1,28 +1,33 @@
 
 import sys
 
-row = int(input("How many rows of boxes? "))
+rows = int(input("How many rows of boxes? "))
 columns = int(input("How many columns of boxes? "))
 row_spaces = int(input("How many rows of spaces in each box? "))
 column_spaces = int(input("How many columns of spaces in each box (e.g., 3)? "))
 
 
-print (row)
+for i in range(rows):
+	for i in range(columns):
+	    print("+",end="")
+	    for i in range(column_spaces):
+	        print("-",end="")
+	print("+")
 
-for _ in range(row):
-    print("+", end=" ")
+	for spaces in range(row_spaces):
+	    for _ in range(columns):
+	        print("|",end="")
 
-    for _ in range(columns):
-        print("-",end=" ")
+	        for space in range(column_spaces):
+	            print(" ",end="")
+	    
+	    print("|")
 
-        #for space in range(row_spaces):
-        #    print("|")
-
-        #for spaces in range(column_spaces):
-        #    print(" ")
-    
-    #print()
-
+for i in range(columns):
+    print("+",end="")
+    for i in range(column_spaces):
+        print("-",end="")
+print("+")
 
 #+ and - are characters
 
